@@ -10,6 +10,7 @@ services:
             - "443:443"
         volumes:
             - ./www:/var/www/html
+            - ./apache-logs:/apache-logs/
     mail:
         image: mailhog/mailhog
         ports:
