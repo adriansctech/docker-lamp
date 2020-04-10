@@ -11,3 +11,7 @@ cd .. && composer create-project drupal-composer/drupal-project:8.x-dev www
 ./start.sh
 docker-compose exec --user=1000:1000 web sh -c 'vendor/bin/drush si standard --db-url=mysql://root:123@db/drupal8 -y'
 docker-compose exec web sh -c "ln -s /var/www/html/vendor/bin/dush /usr/local/bin/drush"
+
+#work in here
+#docker-compose exec --user=1000:1000 web sh -c "composer create-project drupal/recommended-project /var/www/html/"
+#docker-compose exec --user=1000:1000 web sh -c "composer require drush/drush"
