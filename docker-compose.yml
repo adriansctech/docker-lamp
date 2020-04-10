@@ -11,6 +11,7 @@ services:
         volumes:
             - ./www:/var/www/html
             - ./apache-logs:/apache-logs/
+            - ./historical:/historical/
     mail:
         image: mailhog/mailhog
         ports:

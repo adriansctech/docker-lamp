@@ -34,13 +34,11 @@ Normal workflow
 
   * Execute the start.sh script to start LAMP (`./start.sh`)
   * When you finish working execute the stop.sh script (`./stop.sh`)
+  * When you need rebuild docker image execute the rebuild.sh scrip (`./rebuild`)
 
 Helper scripts
-==========
-
-  - You can install Drush + Drupal 7 by executing `./scripts/install_drupal7.sh`
-  - You can install Drush + Drupal 8 by executing `./scripts/install_drupal8.sh`
-  - You can install WP CLI + Wordpress by executing `./scripts/install_wp.sh`
+==========  
+  - You can install Drupal 8 standard by executing `./install_drupal8_basic.sh`  
   - You can access to the bash by executing `./bash.sh`
   - You can access to the bash as a the **root user** by executing `./root_bash.sh`
 
@@ -50,3 +48,17 @@ Notes
   - The database server host is not 'localhost'. Use 'db' instead of 'localhost'.
   - The database user is 'root' and the password is '123'
   - You can access to Mailhog in http://localhost:8025
+
+
+Folders
+=====
+  - apache-logs
+      In this folder can check the logs of apache web server (error and access)
+    - old-logs
+      When you stop the docker, actually apache logs (error and access) automatically saved with the datetime of this moment
+
+  - historical
+      In this folder saved a result of command execution of basic install of drupal
+
+  - sql
+    In this folder can be save the backups of database

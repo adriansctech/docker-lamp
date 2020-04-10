@@ -7,4 +7,8 @@ docker-compose exec web sh -c "sed -i -e 's/www\/html/www\/html\/web/g' /etc/apa
 docker-compose exec web sh -c "sed -i -e 's/www\/html/www\/html\/web/g' /etc/apache2/sites-enabled/default-ssl.conf"
 docker-compose exec --user=1000:1000 web sh -c "composer create-project drupal/recommended-project /var/www/html/"
 docker-compose exec --user=1000:1000 web sh -c "composer require drush/drush"
-docker-compose exec --user=1000:1000 web sh -c 'vendor/bin/drush si standard --db-url=mysql://root:123@db/drupal8 -y'
+docker-compose exec --user=1000:1000 web sh -c "vendor/bin/drush si standard --db-url=mysql://root:123@db/drupal8 -y"
+docker-compose exec --user=1000:1000 web sh -c "vendor/bin/drush cr"
+docker-compose exec --user=1000:1000 web sh -c "echo 'Subject: Drupal basic has been install correctly' | sendmail -v adrian_sc@live.com"
+notify-send 'Drupal basic has been installed' -t 0
+xdg-open http:localhost

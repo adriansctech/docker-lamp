@@ -5,12 +5,12 @@ then
 		echo "***************************************"
 		echo "**** Display error log in real time ***"
 		echo "****************************************"
-        tail -f apache-logs/error.log
         xdg-open http:localhost
+        tail -f apache-logs/error.log        
 else
 		echo "****************************************"
 		echo "**** Display access log in real time ***"
 		echo "****************************************"
-    	tail -f apache-logs/access.log
     	xdg-open http:localhost
+    	tail -f apache-logs/access.log    	
 fi

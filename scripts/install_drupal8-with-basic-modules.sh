@@ -10,3 +10,5 @@ docker-compose exec --user=1000:1000 web sh -c 'yes | vendor/bin/drush en admin_
 docker-compose exec --user=1000:1000 web sh -c 'chmod 777 web/sites/default/'
 docker-compose exec --user=1000:1000 web sh -c 'vendor/bin/drupal site:mode dev'
 docker-compose exec --user=1000:1000 web sh -c 'vendor/bin/drush cr'
+notify-send 'Drupal has been installed with basicall modules' -t 0
+xdg-open http:localhost
