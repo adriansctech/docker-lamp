@@ -50,5 +50,6 @@ ADD templates/apache2.conf /etc/apache2/
 ADD templates/php.ini /usr/local/etc/php/
 ADD templates/ssmtp.conf /etc/ssmtp/
 ADD templates/xdebug.ini /usr/local/etc/php/conf.d/
+ADD templates/000-default.conf /etc/apache2/sites-available/
 
 
